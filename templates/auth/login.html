@@ -1,0 +1,89 @@
+{% extends 'layout/auth_base.html' %} {% load static %} {% block content %}
+<!-- ===== CONTENT WRAPPER =======  -->
+<div class="log-layout">
+  <div class="content">
+    <section class="template">
+      <div class="log-logo">
+        <img src=" {% static 'assets/img/logo/log-logo.png' %}" alt="Logo" />
+      </div>
+      <form action="">
+        <div class="log-header">
+          <h1>Login</h1>
+        </div>
+        <div class="log-input">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingPassword"
+              placeholder="Enter Email Address"
+            />
+            <label for="floatingPassword">Email Address</label>
+          </div>
+        </div>
+        <div class="log-input mt-3">
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="passwordInput"
+              placeholder="******************"
+            />
+            <label for="floatingPassword">Password</label>
+            <span class="eye"
+              ><i class="ri-eye-line show" id="showPassword"></i
+            ></span>
+            <span class="eye"
+              ><i class="ri-eye-off-line hide" id="hidePassword"></i
+            ></span>
+          </div>
+        </div>
+
+        <div class="forget-password-link">
+          <a href="{% url 'forget_password' %}">Forget Password?</a>
+        </div>
+
+        <div class="log-btn">
+          <button type="submit" class="hero-btn btn2">Confirm</button>
+        </div>
+        <div class="or">
+          <p>Or</p>
+        </div>
+        <div class="options">
+          <a href=""><i class="ri-facebook-fill"></i></a>
+          <a href=""><i class="ri-twitter-line"></i></a>
+          <a href=""><i class="ri-google-fill"></i></a>
+        </div>
+
+        <div class="register">
+          <p>
+            Don’t have an account?
+            <a href="{% url 'register' %}">Register Here</a>
+          </p>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>
+<!-- ===== CONTENT WRAPPER =======  -->
+
+<!-- script to show and hide password  -->
+<script>
+  const passwordInput = document.getElementById("passwordInput");
+  const showPasswordIcon = document.getElementById("showPassword");
+  const hidePasswordIcon = document.getElementById("hidePassword");
+
+  showPasswordIcon.addEventListener("click", function () {
+    passwordInput.type = "password";
+    showPasswordIcon.style.display = "none";
+    hidePasswordIcon.style.display = "inline-block";
+  });
+
+  hidePasswordIcon.addEventListener("click", function () {
+    passwordInput.type = "text";
+    hidePasswordIcon.style.display = "none";
+    showPasswordIcon.style.display = "inline-block";
+  });
+</script>
+
+{% endblock %}

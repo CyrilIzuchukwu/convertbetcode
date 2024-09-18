@@ -1,0 +1,718 @@
+{% extends 'layout/base.html' %} {% load static %} {% block content %}
+
+<!-- ===== CONTENT WRAPPER =======  -->
+<div class="content-wrapper pricing">
+  <div class="container">
+    <div class="data-container">
+      <div class="main-header">
+        <div class="element">
+          <h1>BET EDITOR</h1>
+          <p>
+            It is a service that transfers bet selections from one betting site
+            to another. Otherwise, bettors give up
+          </p>
+        </div>
+      </div>
+
+      <div class="bet-converter-sub-section">
+        <div class="form-wrapper">
+          <form action="" method="">
+            <div class="booking-code-input">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Booking Code"
+                />
+                <label for="floatingPassword">Enter Booking Code</label>
+              </div>
+            </div>
+            <div class="from-to-input">
+              <div class="form-floating">
+                <select
+                  class="select-option"
+                  id="floatingSelect"
+                  aria-label="Floating label select example"
+                >
+                  <option selected>Select item</option>
+                  <option value="">Sportybet</option>
+                  <option value="">1xbet</option>
+                  <option value="">Bet9ja</option>
+                  <option value="">Betking</option>
+                  <option value="">22bet</option>
+                </select>
+                <label class="select-option-label" for="floatingSelect"
+                  >Convert To</label
+                >
+              </div>
+
+              <div class="form-floating">
+                <select
+                  class="select-option"
+                  id="floatingSelect"
+                  aria-label="Floating label select example"
+                >
+                  <option selected>Select item</option>
+                  <option value="">Msport</option>
+                  <option value="">Betking</option>
+                  <option value="">Sportybet</option>
+                  <option value="">1xbet</option>
+                  <option value="">22bet</option>
+                </select>
+                <label class="select-option-label" for="floatingSelect"
+                  >Convert To</label
+                >
+              </div>
+            </div>
+
+            <div class="convert-btn">
+              <button
+                type="button"
+                class="seemore-btn btn2"
+                data-bs-target="#convertedCodeToggle1"
+                data-bs-toggle="modal"
+              >
+                Convert
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="betcoverter-modal">
+    <!-- CONVERTED CODE MODAL STARTS -->
+    <div
+      class="modal fade"
+      id="convertedCodeToggle1"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      aria-labelledby="convertedCodeToggle1"
+      tabindex="-1"
+    >
+      <div class="modal-dialog converted-code modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="arrow-icon">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="action">
+              <a href="" class="seemore-btn btn2"
+                >Download
+                <i class="fa-solid fa-download"></i>
+              </a>
+              <div class="share-icon">
+                <a href="">
+                  <i class="ri-share-line"></i>
+                </a>
+              </div>
+              <div class="copy-icon" data-target="convertedCodeToggle1">
+                <i class="ri-file-copy-line"></i>
+              </div>
+            </div>
+            <div class="bet-content">
+              <div class="betname">
+                <p>1xbet</p>
+                <p>Sporty</p>
+              </div>
+              <div class="coden">
+                <p class="converted-from">RTH3Z</p>
+                <div class="d-flex align-items-center gap-1">
+                  <span id="code-copied-msg" style="display: none"
+                    >Code copied</span
+                  >
+                  <p class="converted-to">BKY32</p>
+                </div>
+              </div>
+              <div class="odds">
+                <p>218 odds</p>
+                <p>230 odds</p>
+              </div>
+              <div class="matches">
+                <p>16 matches</p>
+                <p>16 matches</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="seemore-btn btn2"
+              data-bs-target="#convertedCodeToggle2"
+              data-bs-toggle="modal"
+            >
+              View
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CONVERTED CODE MODAL ENDS -->
+
+    <!-- VIEW CODE MODAL STARTS -->
+    <div
+      class="modal fade"
+      id="convertedCodeToggle2"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      aria-labelledby=""
+      tabindex="-1"
+    >
+      <div class="modal-dialog converted-code modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              class="btn btn-primary btn-go-back"
+              data-bs-target="#convertedCodeToggle1"
+              data-bs-toggle="modal"
+            >
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="arrow-icon">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="action">
+              <a href="" class="seemore-btn btn2"
+                >Download
+                <i class="fa-solid fa-download"></i>
+              </a>
+              <div class="share-icon">
+                <a href="">
+                  <i class="ri-share-line"></i>
+                </a>
+              </div>
+              <div class="copy-icon" data-target="convertedCodeToggle2">
+                <i class="ri-file-copy-line"></i>
+              </div>
+            </div>
+            <div class="bet-content">
+              <div class="betname">
+                <p>1xbet</p>
+                <p>Sporty</p>
+              </div>
+              <div class="coden">
+                <p class="converted-from">RTH3Z</p>
+                <div class="d-flex align-items-center gap-1">
+                  <span id="code-copied-msg2" style="display: none"
+                    >Code copied</span
+                  >
+                  <p class="converted-to2">BKY32</p>
+                </div>
+              </div>
+              <div class="odds">
+                <p>218 odds</p>
+                <p>230 odds</p>
+              </div>
+              <div class="matches">
+                <p>16 matches</p>
+                <p>16 matches</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="view-code-wrapper">
+              <!-- single game  -->
+              <div class="single-game">
+                <div class="axes1">
+                  <p>Japan. J-League</p>
+                  <span>1XBet</span>
+                </div>
+                <div class="axes2">
+                  <p>Consadole Sapporo - Albirex Niigata</p>
+                </div>
+
+                <div class="axes3">
+                  <p>Total Total Over (1.5)</p>
+                  <span>Jun 20th 17:00 UTC</span>
+                </div>
+
+                <hr />
+
+                <div class="axes1">
+                  <p>Japan. J-League</p>
+                  <span>1XBet</span>
+                </div>
+                <div class="axes2">
+                  <p>Consadole Sapporo - Albirex Niigata</p>
+                </div>
+
+                <div class="axes3">
+                  <p>Total Total Over (1.5)</p>
+                  <span>Jun 20th 17:00 UTC</span>
+                </div>
+              </div>
+              <!-- single game ends  -->
+
+              <!-- single game  -->
+              <div class="single-game">
+                <div class="axes1">
+                  <p>Japan. J-League</p>
+                  <span>1XBet</span>
+                </div>
+                <div class="axes2">
+                  <p>Consadole Sapporo - Albirex Niigata</p>
+                </div>
+
+                <div class="axes3">
+                  <p>Total Total Over (1.5)</p>
+                  <span>Jun 20th 17:00 UTC</span>
+                </div>
+
+                <hr />
+
+                <div class="axes1">
+                  <p>Japan. J-League</p>
+                  <span>1XBet</span>
+                </div>
+                <div class="axes2">
+                  <p>Consadole Sapporo - Albirex Niigata</p>
+                </div>
+
+                <div class="axes3">
+                  <p>Total Total Over (1.5)</p>
+                  <span>Jun 20th 17:00 UTC</span>
+                </div>
+              </div>
+              <!-- single game ends  -->
+
+              <!-- single game  -->
+              <div class="single-game">
+                <div class="axes1">
+                  <p>Japan. J-League</p>
+                  <span>1XBet</span>
+                </div>
+                <div class="axes2">
+                  <p>Consadole Sapporo - Albirex Niigata</p>
+                </div>
+
+                <div class="axes3">
+                  <p>Total Total Over (1.5)</p>
+                  <span>Jun 20th 17:00 UTC</span>
+                </div>
+
+                <hr />
+
+                <div class="axes1">
+                  <p>Japan. J-League</p>
+                  <span>1XBet</span>
+                </div>
+                <div class="axes2">
+                  <p>Consadole Sapporo - Albirex Niigata</p>
+                </div>
+
+                <div class="axes3">
+                  <p>Total Total Over (1.5)</p>
+                  <span>Jun 20th 17:00 UTC</span>
+                </div>
+              </div>
+              <!-- single game ends  -->
+
+              <!-- single game  -->
+              <div class="single-game">
+                <div class="axes1">
+                  <p>Japan. J-League</p>
+                  <span>1XBet</span>
+                </div>
+                <div class="axes2">
+                  <p>Consadole Sapporo - Albirex Niigata</p>
+                </div>
+
+                <div class="axes3">
+                  <p>Total Total Over (1.5)</p>
+                  <span>Jun 20th 17:00 UTC</span>
+                </div>
+
+                <hr />
+
+                <div class="axes1">
+                  <p>Japan. J-League</p>
+                  <span>1XBet</span>
+                </div>
+                <div class="axes2">
+                  <p>Consadole Sapporo - Albirex Niigata</p>
+                </div>
+
+                <div class="axes3">
+                  <p>Total Total Over (1.5)</p>
+                  <span>Jun 20th 17:00 UTC</span>
+                </div>
+              </div>
+              <!-- single game ends  -->
+
+              <!-- single game  -->
+              <div class="single-game">
+                <div class="axes1">
+                  <p>Japan. J-League</p>
+                  <span>1XBet</span>
+                </div>
+                <div class="axes2">
+                  <p>Consadole Sapporo - Albirex Niigata</p>
+                </div>
+
+                <div class="axes3">
+                  <p>Total Total Over (1.5)</p>
+                  <span>Jun 20th 17:00 UTC</span>
+                </div>
+
+                <hr />
+
+                <div class="axes1">
+                  <p>Japan. J-League</p>
+                  <span>1XBet</span>
+                </div>
+                <div class="axes2">
+                  <p>Consadole Sapporo - Albirex Niigata</p>
+                </div>
+
+                <div class="axes3">
+                  <p>Total Total Over (1.5)</p>
+                  <span>Jun 20th 17:00 UTC</span>
+                </div>
+              </div>
+              <!-- single game ends  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- VIEW CODE MODAL ENDS -->
+  </div>
+
+  <!--===== HOW TO CONVERT CODES AREA STARTS =======-->
+  <div class="how-to-convert-section">
+    <div class="container">
+      <div class="content">
+        <div class="dark-header">
+          <h6 data-aos="fade-up" data-aos-duration="800">
+            How to Use Bet Editor
+          </h6>
+          <p data-aos="fade-up" data-aos-duration="1000">
+            It is a service that transfers bet selections from one betting site
+            to another. Otherwise, bettors give up
+          </p>
+        </div>
+
+        <!-- how to covert grid  -->
+        <div class="htc-grid">
+          <!-- single item  -->
+          <div class="item" data-aos="flip-right" data-aos-duration="2000">
+            <div class="top">
+              <div class="outer-circle">
+                <div class="middle-circle">
+                  <div class="inner-circle">
+                    <div class="value-circle">
+                      <span> 01 </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="down">
+              <p>Enter Your Bet Code</p>
+              <span
+                >Lorem ipsum dolor sit amet consectetur. Et consectetur sodales
+                tortor vulputate in. Porttitor</span
+              >
+            </div>
+          </div>
+
+          <!-- single item  -->
+          <div class="item" data-aos="flip-left" data-aos-duration="2000">
+            <div class="top">
+              <div class="outer-circle">
+                <div class="middle-circle">
+                  <div class="inner-circle">
+                    <div class="value-circle">
+                      <span> 02 </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="down">
+              <p>Select Origin Bookie</p>
+              <span
+                >Lorem ipsum dolor sit amet consectetur. Et consectetur sodales
+                tortor vulputate in. Porttitor</span
+              >
+            </div>
+          </div>
+
+          <!-- single item  -->
+          <div class="item" data-aos="flip-right" data-aos-duration="2000">
+            <div class="top">
+              <div class="outer-circle">
+                <div class="middle-circle">
+                  <div class="inner-circle">
+                    <div class="value-circle">
+                      <span> 03 </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="down">
+              <p>Select Origin Bookie</p>
+              <span
+                >Lorem ipsum dolor sit amet consectetur. Et consectetur sodales
+                tortor vulputate in. Porttitor</span
+              >
+            </div>
+          </div>
+
+          <!-- single item  -->
+          <div class="item" data-aos="flip-left" data-aos-duration="2000">
+            <div class="top">
+              <div class="outer-circle">
+                <div class="middle-circle">
+                  <div class="inner-circle">
+                    <div class="value-circle">
+                      <span> 04 </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="down">
+              <p>View Results</p>
+              <span
+                >Lorem ipsum dolor sit amet consectetur. Et consectetur sodales
+                tortor vulputate in. Porttitor</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=====HOW TO CONVERT CODES WHY AREA ENDS =======-->
+
+  <!--===== FAQ AREA STARTS =======-->
+  <div class="faq2-section-area">
+    <div class="container">
+      <div class="faq-content">
+        <div class="left-content" data-aos="zoom-in" data-aos-duration="1000">
+          <img src="{% static 'assets/img/icons/faq-icon.png' %}" alt="" />
+          <h5>Frequently Asked Questions</h5>
+          <p>
+            It is a service that transfers bet selections from one betting site
+            to another. Otherwise, bettors give up
+          </p>
+        </div>
+        <div class="right">
+          <div class="faq-auhtor-area1">
+            <div
+              class="accordion accordion-flush active"
+              id="accordionFlushExample"
+            >
+              <div
+                class="accordion-item"
+                data-aos="fade-left"
+                data-aos-duration="800"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    Developer API
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Whether you're wondering about our pricing plans, process
+                    installation , or sustainability initiatives, we've got
+                    Best.
+                  </div>
+                </div>
+              </div>
+              <div class="space10"></div>
+              <div
+                class="accordion-item"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Developer API
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur. Et consectetur
+                    sodales tortor vulputate in. Porttitor
+                  </div>
+                </div>
+              </div>
+              <div class="space10"></div>
+              <div
+                class="accordion-item"
+                data-aos="fade-left"
+                data-aos-duration="1200"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    Developer API
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur. Et consectetur
+                    sodales tortor vulputate in. Porttitor
+                  </div>
+                </div>
+              </div>
+              <div class="space10"></div>
+              <div
+                class="accordion-item"
+                data-aos="fade-left"
+                data-aos-duration="1400"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    Developer API
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur. Et consectetur
+                    sodales tortor vulputate in. Porttitor
+                  </div>
+                </div>
+              </div>
+              <div class="space10"></div>
+              <div
+                class="accordion-item"
+                data-aos="fade-left"
+                data-aos-duration="1400"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                    Developer API
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur. Et consectetur
+                    sodales tortor vulputate in. Porttitor
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== FAQ AREA ENDS =======-->
+</div>
+<!-- ===== CONTENT WRAPPER =======  -->
+
+<!-- script to copy code  -->
+<script>
+  document.querySelectorAll(".copy-icon").forEach(function (copyIcon) {
+    copyIcon.addEventListener("click", function () {
+      // Determine which modal the copy-icon belongs to
+      var targetModal = this.getAttribute("data-target");
+      var textToCopy, codeCopiedMsg;
+
+      if (targetModal === "convertedCodeToggle1") {
+        textToCopy = document.querySelector(".converted-to").textContent;
+        codeCopiedMsg = document.getElementById("code-copied-msg");
+      } else if (targetModal === "convertedCodeToggle2") {
+        textToCopy = document.querySelector(".converted-to2").textContent;
+        codeCopiedMsg = document.getElementById("code-copied-msg2");
+      }
+
+      navigator.clipboard
+        .writeText(textToCopy)
+        .then(function () {
+          codeCopiedMsg.style.display = "inline";
+
+          setTimeout(function () {
+            codeCopiedMsg.style.display = "none";
+          }, 2000);
+        })
+        .catch(function (err) {
+          console.error("Failed to copy text: ", err);
+        });
+    });
+  });
+</script>
+
+{% endblock %}

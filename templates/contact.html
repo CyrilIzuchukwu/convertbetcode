@@ -1,0 +1,126 @@
+{% extends 'layout/base.html' %} {% load static %} {% block content %}
+
+<!-- ===== CONTENT WRAPPER =======  -->
+<div class="content-wrapper contact-us">
+  <div class="container">
+    <div class="data-container">
+      <div class="main-header">
+        <div class="element">
+          <h1>CONTACT US</h1>
+          <p>We would love to hear from you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--===== FAQ AREA STARTS =======-->
+  <div class="faq2-section-area">
+    <div class="container">
+      <div class="faq-content">
+        <div class="left-content" data-aos="zoom-in" data-aos-duration="1000">
+          <img src="{% static 'assets/img/icons/contact-icon.png' %}" alt="" />
+          <h5>Reach Out to Us</h5>
+          <p>
+            Have a question, concern, or feedback? We're here to help! Our
+            dedicated support team is available to assist you with any inquiries
+            you may have
+          </p>
+          <div class="media-handle">
+            <h6>Follow Us</h6>
+            <div class="items">
+              <a href=""><i class="ri-instagram-line"></i></a>
+              <a href=""><i class="ri-facebook-line"></i></a>
+              <a href=""><i class="ri-twitter-line"></i></a>
+              <a href=""><i class="ri-mail-line"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="bet-converter-sub-section">
+            <div class="form-wrapper">
+              <form action="" method="">
+                <div class="contact-input">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="floatingPassword"
+                      placeholder="Enter Full name"
+                    />
+                    <label for="floatingPassword">Full name</label>
+                  </div>
+                </div>
+
+                <div class="contact-input">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingPassword"
+                      placeholder="Enter Email Address"
+                    />
+                    <label for="floatingPassword">Email Address</label>
+                  </div>
+                </div>
+
+                <div class="contact-input">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control"
+                      placeholder=""
+                      style="height: 150px"
+                    ></textarea>
+                    <label for="floatingTextarea2">Message</label>
+                  </div>
+                </div>
+
+                <div class="convert-btn">
+                  <button type="submit" class="seemore-btn btn2">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== FAQ AREA ENDS =======-->
+
+  <!--===== EXPLORE DEVELOPER API AREA STARTS =======-->
+  <div class="how-to-convert-section explore-api">
+    <div class="container">
+      <div class="content">
+        <img
+          src="{% static 'assets/img/patterns/explore-pattern.png' %}"
+          class="explore-abs"
+          alt=""
+        />
+        <div class="dark-header">
+          <h6 data-aos="fade-up" data-aos-duration="600">
+            Ready to Explore Developer API?
+          </h6>
+          <p data-aos="fade-up" data-aos-duration="800">
+            It is a service that transfers bet selections from one betting site
+            to another. Otherwise, bettors give up
+          </p>
+
+          <div class="explore-btn">
+            <a
+              href=""
+              class="hero-btn btn2"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              Explore API
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== EXPLORE DEVELOPR API AREA ENDS =======-->
+</div>
+<!-- ===== CONTENT WRAPPER =======  -->
+
+{% endblock %}

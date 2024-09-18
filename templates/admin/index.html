@@ -1,0 +1,432 @@
+{% extends 'layout/admin.html' %} {% load static %} {% block content %}
+<div class="row">
+  <div class="col-lg-12 dashboard-items">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="dashboard-item">
+          <div class="absolute1">
+            <img
+              src="{% static 'admin_assets/images/pattern/pattern1.png' %}"
+              alt=""
+            />
+          </div>
+
+          <div class="content">
+            <div class="top">
+              <p>API Usage Summary</p>
+            </div>
+            <div class="bottom">
+              <div class="bottom-left">
+                <img
+                  src="{% static 'admin_assets/images/icons/icon1.png' %}"
+                  alt=""
+                />
+                <h1>12k</h1>
+              </div>
+
+              <div class="mark-icon">
+                <span>16.75%</span>
+                <div class="bottom-icon">
+                  <i class="ri-arrow-down-double-line"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="dashboard-item dashboard-item-middle">
+          <div class="absolute1">
+            <img
+              src="{% static 'admin_assets/images/pattern/pattern2.png' %}"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <div class="top">
+              <p>API Faults Summary</p>
+            </div>
+            <div class="bottom">
+              <div class="bottom-left">
+                <img
+                  src="{% static 'admin_assets/images/icons/icon2.png' %}"
+                  alt=""
+                />
+                <h1>1.2k</h1>
+              </div>
+              <div class="mark-icon">
+                <span>16.75%</span>
+                <div class="bottom-icon">
+                  <i class="ri-arrow-down-double-line"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="dashboard-item">
+          <div class="absolute1">
+            <img
+              src="{% static 'admin_assets/images/pattern/pattern1.png' %}"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <div class="top">
+              <p>Subscription Summary</p>
+            </div>
+            <div class="bottom">
+              <div class="bottom-left">
+                <img
+                  src="{% static 'admin_assets/images/icons/icon3.png' %}"
+                  alt=""
+                />
+                <h1>367</h1>
+              </div>
+              <div class="mark-icon">
+                <span>33.23%</span>
+                <div class="bottom-icon">
+                  <i class="ri-arrow-down-double-line"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="revenue_section">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="revenue-content">
+          <div class="card left">
+            <div class="card-body">
+              <div class="svg-header">
+                <div class="svg-text">
+                  <img
+                    src="{% static 'admin_assets/images/pattern/crp.png' %}"
+                    alt=""
+                  />
+                  <p>Total Revenue</p>
+                </div>
+                <div class="svg-filter">
+                  <form action="">
+                    <select class="form-select" name="">
+                      <option disabled selected>Month</option>
+                      <option value="">Jan</option>
+                      <option value="">March</option>
+                    </select>
+                  </form>
+                </div>
+              </div>
+              <div class="svg-sub-header">
+                <h3>300,483.00 <span> / Naira</span></h3>
+              </div>
+
+              <div class="line-chart-section">
+                <canvas
+                  id="lineChart_1"
+                  width="695"
+                  height="300"
+                  style="
+                    display: block;
+                    box-sizing: border-box;
+                    height: 278px;
+                    width: 100%;
+                  "
+                ></canvas>
+                <!-- Data attributes to hold the chart data -->
+                <div
+                  id="chart-data"
+                  data-labels='["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]'
+                  data-values="[5000, 20960, 6000, 87000, 66000, 45009, 8000, 20000, 30000, 7106, 80095, 10000]"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="card right">
+            <div class="card-body">
+              <div class="svg-header">
+                <div class="svg-text">
+                  <p>Conversion Rates</p>
+                </div>
+                <div class="svg-filter">
+                  <form action="">
+                    <select class="form-select" name="">
+                      <option disabled selected>Monthly</option>
+                      <option value="">Jan</option>
+                      <option value="">March</option>
+                    </select>
+                  </form>
+                </div>
+              </div>
+
+              <div class="conversion-rate-chart">
+                <div class="content">
+                  <div class="chart-point">
+                    <div class="check-point-area">
+                      <canvas
+                        id="doughnut_chart"
+                        width="109"
+                        height="109"
+                        style="
+                          display: block;
+                          box-sizing: border-box;
+                          height: 8px;
+                          width: 87px;
+                        "
+                        doughnut-data-values="[50, 38, 12]"
+                      >
+                      </canvas>
+                    </div>
+                    <ul class="chart-point-list">
+                      <li>
+                        <i class="fa fa-circle text-successful me-1"></i>
+                        <div class="point-list-flex">
+                          <p>Success</p>
+                          <span>60%</span>
+                        </div>
+                      </li>
+                      <li>
+                        <i class="fa fa-circle text-pending me-1"></i>
+                        <div class="point-list-flex">
+                          <p>Pending</p>
+                          <span>28%</span>
+                        </div>
+                      </li>
+                      <li>
+                        <i class="fa fa-circle text-failed me-1"></i>
+                        <div class="point-list-flex">
+                          <p>Failed</p>
+                          <span>12%</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="graph_section">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="graph-content">
+          <div class="card left">
+            <div
+              class="card-body"
+              style="padding-inline: 1rem; padding-bottom: 0px !important"
+            >
+              <div class="svg-header">
+                <div class="svg-text">
+                  <img
+                    src="{% static 'admin_assets/images/pattern/crp1.png' %}"
+                    alt=""
+                  />
+                  <p>Total Bets Converted</p>
+                </div>
+                <div class="svg-filter">
+                  <form action="">
+                    <select class="form-select" name="">
+                      <option disabled selected>Month</option>
+                      <option value="">Jan</option>
+                      <option value="">March</option>
+                    </select>
+                  </form>
+                </div>
+              </div>
+              <div class="svg-sub-header">
+                <h3>300k</h3>
+              </div>
+
+              <div style="height: 100% !important" id="activity1"></div>
+              <!-- Data attributes to hold the chart data -->
+              <div
+                id="chart-data1"
+                data-labels1='["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]'
+                data-values1="[15000, 20060, 6000, 10000, 16600, 4509, 18000, 2000, 3000, 21206, 8095, 19000]"
+              ></div>
+            </div>
+          </div>
+          <div class="card right">
+            <div
+              class="card-body"
+              style="padding-inline: 1rem; padding-bottom: 0px !important"
+            >
+              <div class="svg-header">
+                <div class="svg-text">
+                  <img
+                    src="{% static 'admin_assets/images/pattern/crp2.png' %}"
+                    alt=""
+                  />
+                  <p>Total Users</p>
+                </div>
+                <div class="d-flex flex-wrap">
+                  <div class="d-flex align-items-center">
+                    <svg
+                      class="me-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="9"
+                      height="9"
+                      viewBox="0 0 13 13"
+                    >
+                      <rect width="9" height="9" rx="6.5" fill="#86E78A" />
+                    </svg>
+                    <span class="">Active</span>
+                  </div>
+                  <div class="application d-flex align-items-center">
+                    <svg
+                      class="me-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="9"
+                      height="9"
+                      viewBox="0 0 13 13"
+                    >
+                      <rect width="9" height="9" rx="6.5" fill="#656464" />
+                    </svg>
+                    <span class="">Inactive</span>
+                  </div>
+                </div>
+                <div class="svg-filter">
+                  <form action="">
+                    <select class="form-select" name="">
+                      <option disabled selected>Month</option>
+                      <option value="">Jan</option>
+                      <option value="">March</option>
+                    </select>
+                  </form>
+                </div>
+              </div>
+              <div class="svg-sub-header">
+                <h3>234 <span> / Total Users</span></h3>
+                <h3>200 <span> / Active Users</span></h3>
+                <h3>34 <span> / Inactive Users</span></h3>
+              </div>
+
+              <div class="">
+                <div
+                  id="vacancyChart"
+                  data-active-users="[0, 60, 50, 35, 40, 65, 45, 35, 45, 60, 84, 30]"
+                  data-inactive-users="[60, 2, 38, 65, 30, 35, 20, 56, 30, 40, 12, 55]"
+                  data-months='["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]'
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="">
+  <section class="activity-log">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Activity Log</h4>
+            <div class="d-flex align-items-center gap-3">
+              <div class="search">
+                <div class="nav-item d-flex align-items-center">
+                  <form action="">
+                    <div class="input-group search-area">
+                      <input
+                        type="search"
+                        class="form-control"
+                        placeholder="Search"
+                      />
+                      <span class="input-group-text">
+                        <button type="submit" class="btn">
+                          <i class="flaticon-381-search-2"></i>
+                        </button>
+                      </span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="filter-right filter-bar">
+                <div class="filter-options">
+                  <select>
+                    <option value="">Filter item by</option>
+                    <option value="cat1">Category 1</option>
+                    <option value="cat2">Category 2</option>
+                    <option value="cat3">Category 3</option>
+                  </select>
+                </div>
+                <div class="filter-icon ri-filter-line"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-responsive">
+                <thead>
+                  <tr>
+                    <th>User ID</th>
+                    <th>Username</th>
+                    <th>Activity Type</th>
+                    <th>IP Address</th>
+                    <th>Endpoint/API</th>
+                    <th>Date/Time</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1234</td>
+                    <td>Cyril Izuchukwu</td>
+                    <td>API Request</td>
+                    <td>192.384.13</td>
+                    <td>getBetDetails</td>
+                    <td>23rd July 2024 / 4:15pm</td>
+                    <td>
+                      <span class="badge light badge-success">Successful</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1234</td>
+                    <td>Cyril Izuchukwu</td>
+                    <td>API Request</td>
+                    <td>192.384.13</td>
+                    <td>Bet Conversion</td>
+                    <td>23rd July 2024 / 4:15pm</td>
+                    <td>
+                      <span class="badge light badge-warning">Pending</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1234</td>
+                    <td>Cyril Izuchukwu</td>
+                    <td>API Request</td>
+                    <td>192.384.13</td>
+                    <td>Error</td>
+                    <td>23rd July 2024 / 4:15pm</td>
+                    <td>
+                      <span class="badge light badge-danger">Failed</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+{% endblock %}

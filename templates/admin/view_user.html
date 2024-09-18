@@ -1,0 +1,351 @@
+{% extends 'layout/admin.html' %} {% load static %} {% block content %}
+<div class="monitize-view-top-header">
+  <a href="" class="previous">
+    <i class="ri-arrow-left-line"></i>
+    <span>Back</span>
+  </a>
+  <div class="d-flex gap-2">
+    <a href="javascript:void(0)" class="suspend"> Suspend</a>
+    <a href="javascript:void(0)" class="delete"
+      ><i class="ri-delete-bin-line"></i> Delete</a
+    >
+  </div>
+</div>
+
+<section class="revenue_section view-conversion">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="revenue-content monitized-user-grid">
+          <div class="card left">
+            <div class="card-body">
+              <div class="initials">
+                <p>AD</p>
+              </div>
+              <div class="user-details monitized-user-details">
+                <div class="single">
+                  <span>Full name</span>
+                  <p>Cyril ConvertCode</p>
+                </div>
+                <div class="single">
+                  <span>Email Address</span>
+                  <p>alexcyril34@gmail.com</p>
+                </div>
+                <div class="single">
+                  <span>Date Joined</span>
+                  <p>20th June, 2024</p>
+                </div>
+                <div class="single">
+                  <span>Plan</span>
+                  <p>Premium</p>
+                </div>
+                <div class="single">
+                  <span>Status</span>
+                  <p>Acive</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="activity-log">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Transaction Summary</h4>
+          <div class="d-flex align-items-center gap-3">
+            <div class="search">
+              <div class="nav-item d-flex align-items-center">
+                <form action="">
+                  <div class="input-group search-area">
+                    <input
+                      type="search"
+                      class="form-control"
+                      placeholder="Search"
+                    />
+                    <span class="input-group-text">
+                      <button type="submit" class="btn">
+                        <i class="flaticon-381-search-2"></i>
+                      </button>
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="filter-right filter-bar">
+              <div class="filter-options">
+                <select>
+                  <option value="">Filter item by</option>
+                  <option value="cat1">Category 1</option>
+                  <option value="cat2">Category 2</option>
+                  <option value="cat3">Category 3</option>
+                </select>
+              </div>
+              <div class="filter-icon ri-filter-line"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table all-users table-responsive-md">
+              <thead>
+                <tr>
+                  <th>S/N</th>
+                  <th>Label</th>
+                  <th>API Keys</th>
+                  <th>Date Created</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1</strong></td>
+                  <td>None Set</td>
+                  <td>
+                    <h6 class="api-key">
+                      <span class="me-3 api-key-content">987653456756432</span>
+                      <i class="ri-file-copy-line copyIcon"></i>
+                      <span
+                        class="copy-message"
+                        style="display: none; color: #000; margin-left: 10px"
+                        >Copied!</span
+                      >
+                    </h6>
+                  </td>
+                  <td>23rd June, 2024</td>
+                  <td><span class="active">Active</span></td>
+                  <td>
+                    <div class="dropdown">
+                      <button
+                        type="button"
+                        class="btn btn-danger light sharp"
+                        data-bs-toggle="dropdown"
+                      >
+                        <svg
+                          width="20px"
+                          height="20px"
+                          viewBox="0 0 24 24"
+                          version="1.1"
+                        >
+                          <g
+                            stroke="none"
+                            stroke-width="1"
+                            fill="none"
+                            fill-rule="evenodd"
+                          >
+                            <rect x="0" y="0" width="24" height="24"></rect>
+                            <circle
+                              fill="#000000"
+                              cx="5"
+                              cy="12"
+                              r="2"
+                            ></circle>
+                            <circle
+                              fill="#000000"
+                              cx="12"
+                              cy="12"
+                              r="2"
+                            ></circle>
+                            <circle
+                              fill="#000000"
+                              cx="19"
+                              cy="12"
+                              r="2"
+                            ></circle>
+                          </g>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"
+                          ><i class="ri-delete-bin-line"></i> Delete</a
+                        >
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>1</strong></td>
+                  <td>None Set</td>
+                  <td>
+                    <h6 class="api-key">
+                      <span class="me-3 api-key-content">987653456756432</span>
+                      <i class="ri-file-copy-line copyIcon"></i>
+                      <span
+                        class="copy-message"
+                        style="display: none; color: #000; margin-left: 10px"
+                        >Copied!</span
+                      >
+                    </h6>
+                  </td>
+                  <td>23rd June, 2024</td>
+                  <td><span class="active">Active</span></td>
+                  <td>
+                    <div class="dropdown">
+                      <button
+                        type="button"
+                        class="btn btn-danger light sharp"
+                        data-bs-toggle="dropdown"
+                      >
+                        <svg
+                          width="20px"
+                          height="20px"
+                          viewBox="0 0 24 24"
+                          version="1.1"
+                        >
+                          <g
+                            stroke="none"
+                            stroke-width="1"
+                            fill="none"
+                            fill-rule="evenodd"
+                          >
+                            <rect x="0" y="0" width="24" height="24"></rect>
+                            <circle
+                              fill="#000000"
+                              cx="5"
+                              cy="12"
+                              r="2"
+                            ></circle>
+                            <circle
+                              fill="#000000"
+                              cx="12"
+                              cy="12"
+                              r="2"
+                            ></circle>
+                            <circle
+                              fill="#000000"
+                              cx="19"
+                              cy="12"
+                              r="2"
+                            ></circle>
+                          </g>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"
+                          ><i class="ri-delete-bin-line"></i> Delete</a
+                        >
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>1</strong></td>
+                  <td>None Set</td>
+                  <td>
+                    <h6 class="api-key">
+                      <span class="me-3 api-key-content">987653456756432</span>
+                      <i class="ri-file-copy-line copyIcon"></i>
+                      <span
+                        class="copy-message"
+                        style="display: none; color: #000; margin-left: 10px"
+                        >Copied!</span
+                      >
+                    </h6>
+                  </td>
+                  <td>23rd June, 2024</td>
+                  <td><span class="active">Active</span></td>
+                  <td>
+                    <div class="dropdown">
+                      <button
+                        type="button"
+                        class="btn btn-danger light sharp"
+                        data-bs-toggle="dropdown"
+                      >
+                        <svg
+                          width="20px"
+                          height="20px"
+                          viewBox="0 0 24 24"
+                          version="1.1"
+                        >
+                          <g
+                            stroke="none"
+                            stroke-width="1"
+                            fill="none"
+                            fill-rule="evenodd"
+                          >
+                            <rect x="0" y="0" width="24" height="24"></rect>
+                            <circle
+                              fill="#000000"
+                              cx="5"
+                              cy="12"
+                              r="2"
+                            ></circle>
+                            <circle
+                              fill="#000000"
+                              cx="12"
+                              cy="12"
+                              r="2"
+                            ></circle>
+                            <circle
+                              fill="#000000"
+                              cx="19"
+                              cy="12"
+                              r="2"
+                            ></circle>
+                          </g>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"
+                          ><i class="ri-delete-bin-line"></i> Delete</a
+                        >
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- pagination  -->
+          <div
+            class="d-flex align-items-center justify-content-sm-between flex-wrap justify-content-center"
+          >
+            <div class="sm-mb-0 mb-3">
+              <p class="mb-0">Showing 5 of 102 Data</p>
+            </div>
+            <nav>
+              <ul class="pagination pagination-circle">
+                <li class="page-item page-indicator">
+                  <a class="page-link" href="javascript:void(0)">
+                    <i class="ri-arrow-left-double-line"></i>
+                  </a>
+                </li>
+
+                <li class="page-item active">
+                  <a class="page-link" href="javascript:void(0)">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="javascript:void(0)">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="javascript:void(0)">3</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="javascript:void(0)">4</a>
+                </li>
+
+                <li class="page-item page-indicator">
+                  <a class="page-link" href="javascript:void(0)">
+                    <i class="ri-arrow-right-double-fill"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

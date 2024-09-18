@@ -1,0 +1,149 @@
+{% extends 'layout/base.html' %} {% load static %} {% block content %}
+
+<!-- ===== CONTENT WRAPPER =======  -->
+<div class="content-wrapper dashboard">
+  <div class="container">
+    <div class="dashboard-content">
+      <div class="dashboard-header">
+        <ul>
+          <li><a href="#dashboard" class="active">Dashboard</a></li>
+          <li><a href="#api-integration">API</a></li>
+          <li><a href="#orders">Orders</a></li>
+        </ul>
+      </div>
+
+      <!-- dashboard content  -->
+      <div id="dashboard" class="tag dashboard-tag-content">
+        <div class="sub-header">
+          <h5>Dashboard</h5>
+          <span class="email-verification">Email not verified</span>
+        </div>
+
+        <div class="dashboard-element">
+          <div class="single-item">
+            <div class="text">
+              <p>Unit</p>
+              <h6>30</h6>
+            </div>
+            <div class="icon">
+              <i class="ri-coupon-line"></i>
+            </div>
+          </div>
+          <div class="single-item">
+            <div class="text">
+              <p>Account Plan</p>
+              <h6>No Plan</h6>
+            </div>
+            <div class="icon">
+              <i class="ri-price-tag-3-line"></i>
+            </div>
+          </div>
+
+          <div class="single-item">
+            <div class="text">
+              <p>Referrals</p>
+              <h6>30</h6>
+            </div>
+            <div class="icon">
+              <i class="ri-group-line"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- api integration  -->
+      <div id="api-integration" class="tag api-integration-tag-content">
+        <div class="sub-header">
+          <h5>API Integration</h5>
+        </div>
+
+        <div class="api-key">
+          <div class="api-header">
+            <p>API Keys</p>
+            <p>API Documentation</p>
+          </div>
+          <div class="api-content">
+            <span>No records found</span>
+          </div>
+
+          <div class="warning">
+            <h6>Warning!!!</h6>
+            <p>
+              You are responsible for keeping your API keys secure. If you ever
+              feel it has been compromised or in the hands of unauthorized
+              persons, you can request another key. You should not use your KEYS
+              on the client codes as codes on the client's side can be spoofed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--===== EXPLORE DEVELOPER API AREA STARTS =======-->
+  <div class="how-to-convert-section explore-api">
+    <div class="container">
+      <div class="content">
+        <img
+          src="assets/img/patterns/explore-pattern.png"
+          class="explore-abs"
+          alt=""
+        />
+        <div class="dark-header">
+          <h6 data-aos="fade-up" data-aos-duration="600">
+            Ready to Explore Developer API?
+          </h6>
+          <p data-aos="fade-up" data-aos-duration="800">
+            It is a service that transfers bet selections from one betting site
+            to another. Otherwise, bettors give up
+          </p>
+
+          <div class="explore-btn">
+            <a
+              href=""
+              class="hero-btn btn2"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              Explore API
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== EXPLORE DEVELOPR API AREA ENDS =======-->
+</div>
+<!-- ===== CONTENT WRAPPER =======  -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".dashboard-header ul li a");
+    const sections = document.querySelectorAll(".tag");
+
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        sections.forEach((section) => section.classList.remove("active"));
+        links.forEach((link) => link.classList.remove("active"));
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+          target.classList.add("active");
+          this.classList.add("active");
+        }
+      });
+    });
+
+    const defaultActiveLink = document.querySelector(
+      ".dashboard-header ul li a.active"
+    );
+    if (defaultActiveLink) {
+      defaultActiveLink.click();
+    }
+  });
+</script>
+
+{% endblock %}
